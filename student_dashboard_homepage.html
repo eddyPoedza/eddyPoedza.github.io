@@ -1,0 +1,262 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Study Bay – Dashboard 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fdf6fa;
+    }
+    .header, footer {
+      background-color: #fa08a988;
+      color: white;
+      text-align: center;
+      padding: 1rem;
+    }
+    .dashboard {
+      display: flex;
+    }
+    .sidebar {
+      width: 250px;
+      background-color: #7bc9fd60;
+      padding: 2rem 1rem;
+    }
+    .sidebar a {
+      display: block;
+      margin-bottom: 0.75rem;
+      text-decoration: none;
+      color: #007acc;
+      font-weight: bold;
+    }
+    .content {
+      flex: 1;
+      padding: 2rem;
+    }
+    .level-block {
+      margin-bottom: 3rem;
+    }
+    .course-list {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1.5rem;
+    }
+    .course-item {
+      background: #fff;
+      border-radius: 8px;
+      padding: 1rem;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
+    }
+    .course-item h5 {
+      margin-bottom: 0.5rem;
+      color: #c2185b;
+    }
+    .course-item a {
+      display: inline-block;
+      background-color: #fa08a988;
+      color: white;
+      padding: 8px 12px;
+      text-decoration: none;
+      border-radius: 4px;
+    }
+    .course-item a:hover {
+      background-color: #c5067a;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background-color: #fce4ec;
+      color: #555;
+    }
+
+    /* 💖 Welcome Animation */
+    #welcomeMessage {
+      display: none;
+      position: fixed;
+      top: 30%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      background: #fff0f8;
+      color: #c2185b;
+      padding: 2rem 3rem;
+      border-radius: 12px;
+      box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+      font-size: 1.5rem;
+      text-align: center;
+      z-index: 9999;
+      animation: fadeIn 1s ease-out;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; transform: scale(0.9) translate(-50%, -50%); }
+      to { opacity: 1; transform: scale(1) translate(-50%, -50%); }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- 🎉 Welcome Message -->
+  <div id="welcomeMessage">🎉 Welcome, Comfort Poedza 💕</div>
+
+  <div class="header">
+    <h1>🎓 Study Bay</h1>
+  </div>
+
+  <div class="dashboard">
+    <aside class="sidebar">
+      <h3>Menu</h3>
+      <a href="materials.html">📚 Materials</a>
+      <a href="C:\Users\dell\Documents\my classroom\notes_page.html">📝 Notes</a>
+      <a href="C:\Users\dell\Documents\my classroom\timetable.html">📅 Timetable</a>
+      <a href="#">👩‍🏫 Lecturer Info</a>
+    </aside>
+
+    <main class="content">
+      <h2>Hello,  Comfort 💗</h2>
+      <p>Let’s make this semester amazing together ✨</p>
+      <!-- Add dashboard blocks/content here -->
+    </main>
+  </div>
+    <main class="content">
+
+      <!-- 🔍 Search Bar -->
+      <input type="text" id="searchInput" placeholder="🔍 Search a subject...">
+
+      <!-- 📘 Level 100 – Semestr 1 -->
+      <div class="level-block">
+        <h2>📘 Level 100 – Semester 1</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Introduction to Financial Accounting I</h5><a href="C:\Users\dell\Documents\my classroom\Principles-of-Financial-Accounting.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Microeconomics</h5><a href="C:\Users\dell\Documents\my classroom\Microeconomics.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Mathematics</h5><a href="C:\Users\dell\Documents\my classroom\OTB_176_03_Business_Math_A_Step_by_Step_Handbook_2023_A_D_6f0583eb73.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Communication Skills</h5><a href="C:\Users\dell\Documents\my classroom\business communication.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Introduction to Computers / IT</h5><a href="C:\Users\dell\Documents\my classroom\1BCOM6CA-Introduction-to-computers-&-Information-Technology-ENG.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Academic Writing I (UGRC)</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- 📘 Level 100 – Semester 2 -->
+      <div class="level-block">
+        <h2>📘 Level 100 – Semester 2</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Introduction to Financial Accounting II</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Macroeconomics</h5><a href="C:\Users\dell\Documents\my classroom\macro1.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Statistics</h5><a href="C:\Users\dell\Documents\my classroom\Introductory-Business-Statistics.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Principles of Management</h5><a href="C:\Users\dell\Documents\my classroom\management-principles-v1.0.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Introduction to African Studies</h5><a href="C:\Users\dell\Documents\my classroom\lecture_1-introduction to african studies.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Academic Writing II (UGRC)</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- 📗 Level 200 – Semester 1 -->
+      <div class="level-block">
+        <h2>📗 Level 200 – Semester 1</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Intermediate Financial Accounting I</h5><a href="C:\Users\dell\Documents\my classroom\fundamentals-of-accounting 1.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Cost Accounting I</h5><a href="C:\Users\dell\Documents\my classroom\BBA_CA_LECTURENOTES.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Finance I</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Quantitative Methods</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Commercial Law I</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Entrepreneurship (UGRC)</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- 📗 Level 200 – Semester 2 -->
+      <div class="level-block">
+        <h2>📗 Level 200 – Semester 2</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Intermediate Financial Accounting II</h5><a href="C:\Users\dell\Documents\my classroom\fundamentals-of-accounting 1.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Cost Accounting II</h5><a href="C:\Users\dell\Documents\my classroom\BBA_CA_LECTURENOTES.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Finance II</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Organizational Behaviour</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+          <div class="course-item"><h5>Commercial Law II</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+        </div>
+      </div>
+
+      <!-- 📙 Level 300 – Semester 1 -->
+      <div class="level-block">
+        <h2>📙 Level 300 – Semester 1</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Advanced Financial Accounting I</h5><a href="C:\Users\dell\Documents\my classroom\Advanced Fianacial Accounting- Draft.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Auditing I</h5><a href="C:\Users\dell\Documents\my classroom\study TYBCom Accountancy Auditing-II.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Taxation I</h5><a href="C:\Users\dell\Documents\my classroom\taxation I.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Management Accounting I</h5><a href="C:\Users\dell\Documents\my classroom\management_accounting.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Public Sector Accounting</h5><a href="C:\Users\dell\Documents\my classroom\public sector accounting.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Research Methods</h5><a href="C:\Users\dell\Documents\my classroom\Research Methods in Accounting and Finance Module.pdf" target="_blank">📂 Open PDF</a></div>
+        </div>
+      </div>
+
+      <!-- 📙 Level 300 – Semester 2 -->
+      <div class="level-block">
+        <h2>📙 Level 300 – Semester 2</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Advanced Financial Accounting II</h5><a href="C:\Users\dell\Documents\my classroom\Advanced Fianacial Accounting- Draft.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Auditing II</h5><a href="C:\Users\dell\Documents\my classroom\auditimg II.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Taxation II</h5><a href="C:\Users\dell\Documents\my classroom\Taxation II.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Management Accounting II</h5><a href="C:\Users\dell\Documents\my classroom\JMBA22_II_Sem_ Management_Accountin_II.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Ethics in Accounting</h5><a href="C:\Users\dell\Documents\my classroom\look-inside-study-text-aat-ethics-for-accountants.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Policy I</h5><a href="C:\Users\dell\Documents\my classroom\FMS 427 BusinessPolicy1.pdf" target="_blank">📂 Open PDF</a></div>
+        </div>
+      </div>
+
+      <!-- 📕 Level 400 – Semester 1 -->
+      <div class="level-block">
+        <h2>📕 Level 400 – Semester 1</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Accounting Information Systems</h5><a href="C:\Users\dell\Documents\my classroom\accounting information system.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Strategic Financial Management</h5><a href="C:\Users\dell\Documents\my classroom\BUS5111.StrategicFinancialMgmt.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>International Accounting</h5><a href="C:\Users\dell\Documents\my classroom\international accounting.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Business Policy II</h5><a href="C:\Users\dell\Documents\my classroom\business policy and strategy II.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Elective/Specialization Paper I</h5><a href="C:\Users\dell\Documents\my classroom\UGMasters_CBAS-CHS_HB ECLECTIVE.pdf" target="_blank">📂 Open PDF</a></div>
+        </div>
+      </div>
+
+      <!-- 📕 Level 400 – Semester 2 -->
+      <div class="level-block">
+        <h2>📕 Level 400 – Semester 2</h2>
+        <div class="course-list">
+          <div class="course-item"><h5>Corporate Reporting</h5><a href="C:\Users\dell\Documents\my classroom\Corporate-Reporting-1.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Contemporary Issues in Accounting</h5><a href="C:\Users\dell\Documents\my classroom\Contemporary Issues in Accounting.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Elective/Specialization Paper II</h5><a href="C:\Users\dell\Documents\my classroom\UGMasters_CBAS-CHS_HB ECLECTIVE.pdf" target="_blank">📂 Open PDF</a></div>
+          <div class="course-item"><h5>Long Essay / Project Work</h5><a href="#" onclick="alert('PDF not added yet')">📂 Coming Soon</a></div>
+        </div>
+    </main>
+  </div>
+
+  <footer>
+    &copy; 2025 Made with ❤️ for Mama by You.
+  </footer>
+ 
+   <script>
+    // Show welcome message once
+    const alreadyWelcomed = localStorage.getItem("hasWelcomedComfort");
+    const welcomeBox = document.getElementById("welcomeMessage");
+
+    if (!alreadyWelcomed && welcomeBox) {
+      welcomeBox.style.display = "block";
+      setTimeout(() => {
+        welcomeBox.style.display = "none";
+        localStorage.setItem("hasWelcomedComfort", "true");
+      }, 3000);
+    }
+    
+  </script>
+  
+
+  <!-- 🔍 Search Script -->
+  <script>
+    document.getElementById('searchInput').addEventListener('input', function () {
+      const filter = this.value.toLowerCase();
+      const courses = document.querySelectorAll('.course-item');
+
+      courses.forEach(course => {
+        const title = course.querySelector('h5').textContent.toLowerCase();
+        course.style.display = title.includes(filter) ? 'block' : 'none';
+      });
+    });
+  </script>
+</body>
+</html>

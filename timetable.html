@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>📅 Study Timetable – Study Bay 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff0f8;
+      color: #333;
+    }
+    header {
+      background-color: #fa08a988;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      max-width: 1000px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 1rem;
+      background-color: #fa08a988;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      box-shadow: 0 2px 10px rgba(255, 105, 180, 0.1);
+    }
+    th, td {
+      border: 1px solid #ddd;
+      text-align: center;
+      padding: 12px;
+      background-color: #fff;
+    }
+    th {
+      background-color: #ffb3d7;
+      color: #222;
+    }
+    td input {
+      width: 100%;
+      padding: 5px;
+      border: none;
+      background: transparent;
+      font-size: 1rem;
+      text-align: center;
+    }
+    .level-title {
+      font-size: 1.2rem;
+      margin: 2rem 0 1rem;
+      font-weight: bold;
+      color: #c2185b;
+      text-align: center;
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: #fce4ec;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📅 Study Timetable</h1>
+    <p>You've got this, Mama 💪📘</p>
+  </header>
+
+  <div class="container">
+    <a href="C:\Users\dell\Documents\my classroom\student_dashboard_homepage.html" class="back-button">← Back to Dashboard</a>
+
+    <!-- Level 100 -->
+    <div class="level-title">📘 Level 100</div>
+    <table><thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody id="table-100"></tbody></table>
+
+    <!-- Level 200 -->
+    <div class="level-title">📗 Level 200</div>
+    <table><thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody id="table-200"></tbody></table>
+
+    <!-- Level 300 -->
+    <div class="level-title">📙 Level 300</div>
+    <table><thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody id="table-300"></tbody></table>
+
+    <!-- Level 400 -->
+    <div class="level-title">📕 Level 400</div>
+    <table><thead><tr><th>Time</th><th>Mon</th><th>Tue</th><th>Wed</th><th>Thu</th><th>Fri</th></tr></thead><tbody id="table-400"></tbody></table>
+
+  </div>
+
+  <footer>
+    &copy; 2025 Made with 💖 for Mama by You.
+  </footer>
+
+  <script>
+    const levels = {
+      "table-100": {
+        times: ["8–9", "9–10", "10–11", "11–12", "12–1", "1–2", "2–3"],
+        data: [
+          ["Fin Acct. I", "Microeconomics", "Business Maths", "Break", "Free", "Computers / IT", "Group Study"],
+          ["Macroeconomics", "Revise Maths", "Communication", "Mgmt Principles", "Free", "Reading", "Break"],
+          ["Stats", "Revise", "Writing", "African Studies", "Lunch", "Acct. II", "Review"],
+          ["Acct. I", "Writing", "Break", "Review", "Free", "Essay Time", "Relax"],
+          ["Free", "African Studies", "Lunch", "Reading", "Macroecons", "Lunch", "Essay / Projects"]
+        ]
+      },
+      "table-200": {
+        times: ["8–9", "9–10", "10–11", "11–12", "12–1", "1–2", "2–3"],
+        data: [
+          ["Int Fin Acct I", "Cost Acct. I", "Finance I", "Law I", "Break", "Entrepreneurship", "Reading"],
+          ["Cost Acct II", "Finance II", "Organiz. Behaviour", "Law II", "Lunch", "Review", "Free"],
+          ["Quant. Methods", "Reading", "Group Study", "Writing", "Lunch", "Break", "Discussion"],
+          ["Review", "Writing", "Study Session", "Lunch", "Acct Practice", "Essay Time", "Free"],
+          ["Law I", "Law II", "Lunch", "Entrepreneur", "Free", "Acct. II", "Writing"]
+        ]
+      },
+      "table-300": {
+        times: ["8–9", "9–10", "10–11", "11–12", "12–1", "1–2", "2–3"],
+        data: [
+          ["Adv Acct. I", "Auditing I", "Taxation I", "Lunch", "Mgmt Acct I", "Research", "Free"],
+          ["Auditing II", "Mgmt Acct II", "Public Sector", "Ethics", "Lunch", "Business Policy I", "Reading"],
+          ["Free", "Writing", "Essay Time", "Discussion", "Lunch", "Project Work", "Relax"],
+          ["Review", "Reading", "Lunch", "Free", "Taxation II", "Writing", "Group Work"],
+          ["Practice Qs", "Public Sector", "Lunch", "Acct. Group", "Mgmt Acct", "Break", "Free"]
+        ]
+      },
+      "table-400": {
+        times: ["8–9", "9–10", "10–11", "11–12", "12–1", "1–2", "2–3"],
+        data: [
+          ["AIS", "Strategic Mgmt", "Intl Accounting", "Lunch", "Business Policy II", "Free", "Review"],
+          ["Corporate Reporting", "Contemp. Issues", "Special Paper I", "Lunch", "Reading", "Essay", "Project"],
+          ["Free", "Writing", "Lunch", "Policy", "Free", "Essay Time", "Practice"],
+          ["AIS", "Discussion", "Lunch", "Free", "Review", "Special Paper II", "Relax"],
+          ["Writing", "Lunch", "Group Work", "Research", "Contemp Issues", "Break", "Free"]
+        ]
+      }
+    };
+
+    Object.entries(levels).forEach(([id, table]) => {
+      const tbody = document.getElementById(id);
+      table.times.forEach((time, i) => {
+        const tr = document.createElement("tr");
+        const timeCell = document.createElement("td");
+        timeCell.textContent = time;
+        tr.appendChild(timeCell);
+
+        for (let d = 0; d < 5; d++) {
+          const key = `${id}-${i}-${d}`;
+          const td = document.createElement("td");
+          const input = document.createElement("input");
+          input.type = "text";
+          input.value = (JSON.parse(localStorage.getItem("studyBayTimetable") || "{}")[key]) || table.data[d][i] || "";
+          input.addEventListener("input", () => {
+            const all = JSON.parse(localStorage.getItem("studyBayTimetable") || "{}");
+            all[key] = input.value;
+            localStorage.setItem("studyBayTimetable", JSON.stringify(all));
+          });
+          td.appendChild(input);
+          tr.appendChild(td);
+        }
+        tbody.appendChild(tr);
+      });
+    });
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sign Up – Study Bay 💖</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #9dcffa;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      margin: 0;
+    }
+
+    .signup-container {
+      background: white;
+      padding: 2rem;
+      border-radius: 10px;
+      box-shadow: 0 0 15px rgba(0, 0, 0, 0.15);
+      width: 320px;
+      text-align: center;
+    }
+
+    h2 {
+      margin-bottom: 1rem;
+      color: #d6008f;
+    }
+
+    input {
+      width: 100%;
+      padding: 0.75rem;
+      margin-bottom: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1rem;
+    }
+
+    button {
+      width: 100%;
+      padding: 0.75rem;
+      background-color: #e702b6;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      font-size: 1rem;
+      cursor: pointer;
+    }
+
+    button:disabled {
+      background-color: #ccc;
+      cursor: not-allowed;
+    }
+
+    .footer-note {
+      font-size: 0.8rem;
+      color: #555;
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+  <div class="signup-container">
+    <h2>Sign Up</h2>
+    <input type="text" id="firstName" placeholder="First Name" required />
+    <input type="text" id="lastName" placeholder="Last Name" required />
+    <input type="email" id="email" placeholder="Email" required />
+    <input type="text" id="securityAnswer" placeholder="Your guy calls you with which name?" required />
+    <button onclick="handleSignup()" id="signupBtn">Sign Up</button>
+    <p class="footer-note">💬 Hint: he calls you "mama"</p>
+  </div>
+
+  <script>
+    function handleSignup() {
+      const firstName = document.getElementById('firstName').value.trim();
+      const lastName = document.getElementById('lastName').value.trim();
+      const email = document.getElementById('email').value.trim();
+      const answer = document.getElementById('securityAnswer').value.trim().toLowerCase();
+      const button = document.getElementById('signupBtn');
+
+      if (!firstName || !lastName || !email || !answer) {
+        alert("Please fill in all fields.");
+        return;
+      }
+
+      if (answer !== 'mama') {
+        alert("Oh mama, please try again. You know I love you 🥺💖");
+        return;
+      }
+
+      localStorage.setItem('userFirstName', firstName);
+      localStorage.setItem('userLastName', lastName);
+      localStorage.setItem('userEmail', email);
+
+      button.disabled = true;
+      button.innerText = 'Signing you in...';
+
+      // ✅ Redirect to your actual file path
+      setTimeout(() => {
+        window.location.href = "file:///C:/Users/dell/Documents/my%20classroom/student_dashboard_homepage.html";
+      }, 1000);
+    }
+  </script>
+</body>
+</html>

@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>My Notes – Study Bay 💖</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: 'Segoe UI', sans-serif;
+      background-color: #fff5fa;
+      color: #333;
+    }
+    header {
+      background-color: #fa08a988;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+    }
+    .container {
+      padding: 2rem;
+      max-width: 900px;
+      margin: auto;
+    }
+    textarea {
+      width: 100%;
+      height: 500px;
+      font-size: 1rem;
+      padding: 1rem;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+      resize: vertical;
+      box-shadow: 0 4px 8px rgba(255, 105, 180, 0.1);
+      background-color: #fff;
+    }
+    .status {
+      margin-top: 0.5rem;
+      font-size: 0.9rem;
+      color: #888;
+    }
+    .back-button {
+      display: inline-block;
+      margin-bottom: 1rem;
+      background-color: #fa08a988;
+      color: white;
+      padding: 10px 20px;
+      text-decoration: none;
+      border-radius: 6px;
+      font-weight: bold;
+    }
+    footer {
+      margin-top: 2rem;
+      text-align: center;
+      padding: 1rem;
+      background-color: #fce4ec;
+      color: #555;
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <h1>📝 My Study Notes</h1>
+    <p>Everything you jot down is saved automatically 💾</p>
+  </header>
+
+  <div class="container">
+    <a href="C:\Users\dell\Documents\my classroom\student_dashboard_homepage.html" class="back-button">← Back to Dashboard</a>
+    <textarea id="notes" placeholder="Write anything here..."></textarea>
+    <div class="status" id="status">All changes saved ✔️</div>
+  </div>
+
+  <footer>
+    &copy; 2025 Made with ❤️ for Mama by You.
+  </footer>
+
+  <script>
+    const textarea = document.getElementById('notes');
+    const status = document.getElementById('status');
+
+    textarea.value = localStorage.getItem('studyNotes') || '';
+
+    textarea.addEventListener('input', () => {
+      localStorage.setItem('studyNotes', textarea.value);
+      status.textContent = 'All changes saved ✔️';
+    });
+  </script>
+
+</body>
+</html>
